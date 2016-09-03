@@ -23,7 +23,7 @@
               <div class="genie">
                 Genie
               </div>
-              <div class="direction">
+              <div class="direction" *ngIf="chat.image">
                 <img [src]="chat.image" alt="">
               </div>
               <div class="message received col col-md-offset-1 col-md-8" style='border:1px solid rgba(50, 150, 50, 1); border-radius:3px; color:#FFF; background:rgba(100, 200, 100, 1); padding: 10px 15px'>
