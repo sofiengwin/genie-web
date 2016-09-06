@@ -18,6 +18,8 @@ export class ChatService{
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
+    console.log(this.token, "token")
+
     return this._http.post(url, body, options)
       .map((response: Response) => <any> response.json())
       .do(data => console.log("received message" + JSON.stringify(data)))
