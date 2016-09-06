@@ -12,7 +12,7 @@ import { Ichat } from "../ichat";
 
 export class ChatComponent implements OnInit {
   chats: Ichat[] = [
-    {  message: [ "Genie first message"], messageAuthor: "genie", image: null }
+    {  message: [ "Hello, welcome! I'm the Genie of the Bank 😎 How may I help you?"], messageAuthor: "genie", image: null }
   ]
 
   errorMessage: string
@@ -35,7 +35,8 @@ export class ChatComponent implements OnInit {
 
   sendMessage(event, message){
     event.preventDefault();
-    this.chats.push({message: message, messageAuthor: "you", image: null})
+    this.chats.push({message: message, messageAuthor: "you", image: null});
+    let test = document.getElementById("exampleInputAmount");
     this.messageGenie(message);
   }
 
@@ -46,25 +47,4 @@ export class ChatComponent implements OnInit {
         error => this.errorMessage = <any> error
       )
   }
-
-  startRecording(){
-//     document.querySelector('#button').onclick = function () {
-//     fetch('/api/speech-to-text/token')
-//     .then(function(response) {
-//       return response.text();
-//     }).then(function (token) {
-//       var stream = WatsonSpeech.SpeechToText.recognizeMicrophone({
-//         token: token,
-//         continuous: false, // false = automatically stop transcription the first time a pause is detected
-//         outputElement: '#output' // CSS selector or DOM Element
-//       });
-//       stream.on('error', function(err) {
-//         console.log(err);
-//       });
-//     }).catch(function(error) {
-//       console.log(error);
-//     });
-// };
-  }
-
 }
