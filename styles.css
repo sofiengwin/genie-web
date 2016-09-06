@@ -1,0 +1,12 @@
+body {
+  background: #315481;
+  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  background-attachment: fixed;
+}

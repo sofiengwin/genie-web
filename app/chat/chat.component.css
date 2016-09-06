@@ -1,0 +1,80 @@
+.content-container {
+  height: auto;
+  transition: all 200ms ease-out;
+  transform: translate3d(0, 0, 0);
+  background: #d2edf4;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+  .message-right {
+    /*float: right;*/
+    background: red;
+    display: block;
+  }
+  .message-left {
+    /*float: left;*/
+    background: blue;
+    display: block;
+  }
+
+  .message::after{
+    background: red;
+    height: 100px;
+    width: 100px;
+  }
+
+
+.message::before {
+content: " ";
+position: absolute;
+color: rgba(100, 200, 100, 1);
+border: 6px solid transparent;
+height: 0;
+width: 0;
+transform: rotate(45deg);
+z-index: 5;
+}
+
+.received{
+  padding-left: 20px;
+}
+
+.sent {
+  padding-right: 20px;
+}
+.received::before{
+top: -7px;
+border: 6px solid rgba(100, 200, 100, 1)
+}
+
+.sent::before {
+top: -7px;
+right: 20px;
+border: 6px solid rgba(200, 100, 100, 1)
+}
+
+.genie {
+margin-bottom: 10px;
+position: relative;
+left: 65px;
+}
+
+.you {
+  margin-bottom: 10px;
+  position: relative;
+  left: 589px;
+}
+
+.genie-header {
+  font-weight: 200;
+  color: white;
+  margin: 40px;
+}
+
+img {
+    vertical-align: middle;
+    width: 400px;
+    margin-left: 58px;
+    margin-bottom: 20px;
+}
