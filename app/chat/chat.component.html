@@ -1,4 +1,4 @@
-    <div class="row">
+   <div class="row">
       <div class="row">
         <div class="col-xs-12">
           <div class="page-header genie-header">
@@ -13,7 +13,7 @@
         <div class="row">
 
 
-          <div class="content-container">
+          <div class="content-container" style="margin-bottom: 200px">
 
             <div class="row" *ngFor="let chat of chats">
 
@@ -25,7 +25,7 @@
               <div class="direction" *ngIf="chat.image">
                 <img [src]="chat.image" alt="">
               </div>
-              <div class="message received col col-md-offset-1 col-md-8" style='border:1px solid rgba(50, 150, 50, 1); border-radius:3px; color:#FFF; background:rgba(100, 200, 100, 1); padding: 10px 15px'>
+              <div class="message received col col-md-offset-1 col-md-8" style='border:1px solid rgba(50, 150, 50, 1); border-radius:3px; color:#FFF; background:rgba(100, 200, 100, 1); padding: 10px 15px; margin-bottom: 10px'>
                 <div *ngFor="let messagePart of chat.message" class="message-parts">{{messagePart}}</div>
               </div>
             </div>
@@ -34,18 +34,18 @@
               <div class="you">
                 You
               </div>
-              <div class="message sent col col-md-offset-3 col-md-8" style='border:1px solid rgba(150, 50, 50, 1); border-radius:3px; color:#FFF; background:rgba(200, 100, 100, 1); padding: 10px 15px'>
+              <div class="message sent col col-md-offset-3 col-md-8" style='border:1px solid rgba(150, 50, 50, 1); border-radius:3px; color:#FFF; background:rgba(200, 100, 100, 1); padding: 10px 15px; margin-bottom: 10px'>
                 {{chat.message}}
               </div>
             </div>
 
           </div>
 
-          <form role="form" (submit)="sendMessage($event, message.value)">
+          <form role="form" (submit)="sendMessage($event, message)">
             <div class="form-group col-md-12">
               <div class="input-group">
                 <div class="input-group-addon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span></div>
-                <input type="text" class="form-control" #message id="exampleInputAmount">
+                <input type="text" class="form-control" #message id="exampleInputAmount" [value]="current">
                 <div class="input-group-addon"><span class="glyphicon glyphicon-send" aria-hidden="true"></span></div>
               </div>
             </div>
